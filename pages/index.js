@@ -91,7 +91,6 @@ const Home = () => {
         >
           <button onClick={toggleModal}>close</button>
           <div className={styles.card}>
-            {console.log(activeCar)}
             <p>
               Range:{" "}
               {`${activeCar?.range?.unit.toUpperCase()} ${
