@@ -4,6 +4,8 @@ import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Modal from "react-modal";
+import { sortList, getArrow } from "./utils";
+import { API_URL, ASCENDING, DESCENDING, PRICE, RANGE } from "./constants";
 
 const customStyles = {
   content: {
@@ -19,16 +21,14 @@ Modal.setAppElement("#__next");
 
 const Home = () => {
   const [carList, storeCars] = useState([]);
-  const [priceOrder, setPriceOrder] = useState("ASC");
-  const [rangeOrder, setRangeOrder] = useState("ASC");
+  const [priceOrder, setPriceOrder] = useState(ASCENDING);
+  const [rangeOrder, setRangeOrder] = useState(ASCENDING);
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [activeCar, setActiveCar] = React.useState({});
 
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get(
-        "https://6157228e8f7ea600179850e4.mockapi.io/api/vehicles"
-      );
+      const { data } = await axios.get(API_URL);
       storeCars(data);
     })();
   }, []);
@@ -44,51 +44,25 @@ const Home = () => {
     }
   };
 
-  const getPrice = (price) => {
-    const newPrice = price.split(" ")[0];
-
-    return parseInt(newPrice, 10);
-  };
-  const sortList = (order = "ASC", lists, field) => {
-    switch (field) {
-      case "range":
-        return lists.sort((a, b) =>
-          order === "ASC"
-            ? a.range.distance - b.range.distance
-            : b.range.distance - a.range.distance
-        );
-      case "price":
-        return lists.sort((a, b) =>
-          order === "ASC"
-            ? getPrice(a.price) - getPrice(b.price)
-            : getPrice(b.price) - getPrice(a.price)
-        );
-    }
-  };
-
   const handlePriceSort = (order) => {
-    const newOrder = order === "ASC" ? "DESC" : "ASC";
-    const result = sortList(newOrder, carList, "price");
+    const newOrder = order === ASCENDING ? DESCENDING : ASCENDING;
+    const result = sortList(newOrder, carList, PRICE);
     storeCars(result);
     setPriceOrder(newOrder);
   };
 
   const handleRangeSort = (order) => {
-    const newOrder = order === "ASC" ? "DESC" : "ASC";
-    const result = sortList(newOrder, carList, "range");
+    const newOrder = order === ASCENDING ? DESCENDING : ASCENDING;
+    const result = sortList(newOrder, carList, RANGE);
     storeCars(result);
     setRangeOrder(newOrder);
-  };
-
-  const getArrow = (order) => {
-    return order === "ASC" ? "↑" : "↓";
   };
 
   return (
     <div className={styles.container}>
       <Head>
         <title>Auction Leap</title>
-        <meta name="description" content="Top vehicle auctions ervice" />
+        <meta name="description" content="Top vehicle auction service" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

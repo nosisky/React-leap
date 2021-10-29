@@ -1,6 +1,6 @@
 # Vehicle Leap
 
-### Vehicle project
+### Vehicle project is a simple react application to display vehicle information
 
 ## Table of Contents
 
@@ -27,7 +27,7 @@
 > Git clone this repository
 > CD to the created directory
 > run `npm install`
-> run `npm dev` to start server
+> run `npm run dev` to start server
 
 ## How to Contribute
 
