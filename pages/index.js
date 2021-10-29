@@ -1,11 +1,17 @@
 import Head from "next/head";
 import React from "react";
 import styles from "../styles/Home.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import Modal from "react-modal";
-import { sortList, getArrow } from "./utils";
-import { API_URL, ASCENDING, DESCENDING, PRICE, RANGE } from "./constants";
+import { sortList, getArrow } from "../utils/helpers";
+import {
+  API_URL,
+  ASCENDING,
+  DESCENDING,
+  PRICE,
+  RANGE,
+} from "../utils/constants";
 import Vehiclecard from "./components/VehicleCard";
 
 const customStyles = {
@@ -79,7 +85,9 @@ const Home = () => {
         </p>
         <div className={styles.grid}>
           {carList.map((car) => (
-            <Vehiclecard toggleModal={toggleModal} car={car} />
+            <Fragment key={car.id}>
+              <Vehiclecard toggleModal={toggleModal} car={car} />
+            </Fragment>
           ))}
         </div>
 
@@ -101,8 +109,8 @@ const Home = () => {
 
             <p>
               Available colors:{" "}
-              {activeCar?.colors?.map((color) => (
-                <span>{color}, &nbsp;</span>
+              {activeCar?.colors?.map((color, i) => (
+                <span key={i}>{color}, &nbsp;</span>
               ))}
             </p>
           </div>
