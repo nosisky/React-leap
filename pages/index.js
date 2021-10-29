@@ -6,6 +6,7 @@ import axios from "axios";
 import Modal from "react-modal";
 import { sortList, getArrow } from "./utils";
 import { API_URL, ASCENDING, DESCENDING, PRICE, RANGE } from "./constants";
+import Vehiclecard from "./components/VehicleCard";
 
 const customStyles = {
   content: {
@@ -78,20 +79,7 @@ const Home = () => {
         </p>
         <div className={styles.grid}>
           {carList.map((car) => (
-            <div
-              key={car.id}
-              onClick={() => toggleModal(car.id)}
-              className={styles.card}
-            >
-              <img
-                className={styles.photo}
-                src={car.photo}
-                alt={`${car.make} ${car.model}`}
-              />
-              <p>Make: {car.make}</p>
-              <p>Model: {car.model}</p>
-              <p>Price: ${car.price}</p>
-            </div>
+            <Vehiclecard toggleModal={toggleModal} car={car} />
           ))}
         </div>
 
