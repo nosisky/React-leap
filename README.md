@@ -25,7 +25,7 @@
 ## Installation
 
 - Git clone this repository
-- FollowCD to the created directory
+- CD to the created directory
 - run `npm install`
 - run `npm run dev` to start server
 
