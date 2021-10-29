@@ -14,3 +14,20 @@ a {
 * {
   box-sizing: border-box;
 }
+
+button {
+  cursor: pointer;
+  margin: 0 0 12px;
+  cursor: pointer;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  background-color: #00d1b2;
+  color: #fff;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+}
