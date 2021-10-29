@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Vehicle Leap
 
-## Getting Started
+### Vehicle project
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [Technologies](#technology)
+- [Installation and Setup](#installation)
+- [How to Contribute](#how-to-contribute)
+- [Frequently Asked Questions](#faqs)
+- [Support or New Features](#support-or-new-features)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technology
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+**Vehicle leap** makes use of a host of modern technologies. The core ones are:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- REACT: This project makes use of the REACT Javascript library to build the interface. REACT is used for building web pages that are structured as a collection of components. For more information about See [this link](https://facebook.github.io/react/).
+- CREATE REACT APP: This project makes use of the CREATE REACT APP Reactjs library to build the interface. Create React App is an officially supported way to create single-page React applications. It offers a modern build setup with no configuration. For more information about See [this link](https://reactjs.org/docs/create-a-new-react-app.html).
+- ECMAScript 6: Also known as ES2015, this is a version of Javascript with
+  next-generation features like arrow functions, generators, enhanced object literals,
+  spread operators and more. The ES2015 is used in many areas of this project. See [this link](https://en.wikipedia.org/wiki/ECMAScript) for details.
+- Major codes are written using the Airbnb javascript style guide, see [this link](https://github.com/airbnb/javascript) for details.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Installation
 
-## Learn More
+> Git clone this repository
+> CD to the created directory
+> run `npm install`
+> run `npm dev` to start server
 
-To learn more about Next.js, take a look at the following resources:
+## How to Contribute
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions to this project are welcomed, If you need to contribute to this project, kindly take steps below
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Fork** the repository
+- Follow [Installation and Setup](#installation) as explained earlier
+- Create a branch off **master** for the feature you wish to add
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is authored by **Abdulrasaq Nasirudeen** (nosisky@gmail.com) and is licensed for your use, modification and distribution under the **MIT** license.
+[MIT][license]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<!-- Definitions -->
+
+[license]: LICENSE
+
+[author]: Abdulrasaq Nasirudeen
+
+### FAQs
+
+For more details contact nosisky@gmail.com
