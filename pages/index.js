@@ -42,7 +42,6 @@ const Home = () => {
 
   const toggleModal = (carId) => {
     const carDetails = carList.find((car) => car.id === carId);
-    console.log(carDetails);
     setActiveCar(carDetails);
     if (modalIsOpen) {
       setIsOpen(false);
