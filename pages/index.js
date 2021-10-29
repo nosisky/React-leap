@@ -12,7 +12,7 @@ import {
   PRICE,
   RANGE,
 } from "../utils/constants";
-import Vehiclecard from "./components/VehicleCard";
+import Vehiclecard from "../components/VehicleCard";
 
 const customStyles = {
   content: {
